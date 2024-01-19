@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/presentation_layer/widgets/card_view.dart';
 import 'package:responsive_dashboard/presentation_layer/widgets/main_view.dart';
 import 'package:responsive_dashboard/presentation_layer/widgets/drawer_view.dart';
 
@@ -14,14 +15,16 @@ class DesktopLayout extends StatelessWidget {
           flex: 3,
           child: DrawerView(),
         ),
+        SizedBox(width: 24,),
         Expanded(
           flex: 6,
           child: MainView(),
         ),
-        /*Expanded(
+        SizedBox(width: 24,),
+        Expanded(
           flex: 4,
-          child: Text('mid'),
-        ),*/
+          child: CardView(),
+        ),
       ],
     );
   }

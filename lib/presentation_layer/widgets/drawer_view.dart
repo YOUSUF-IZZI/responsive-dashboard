@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/domain_layer/drawer_items_model.dart';
+import 'package:responsive_dashboard/domain_layer/user_info_item_model.dart';
 import 'package:responsive_dashboard/presentation_layer/components/drawer_component.dart';
 import 'package:responsive_dashboard/presentation_layer/widgets/drawer_item_list_tile.dart';
 import 'package:responsive_dashboard/presentation_layer/widgets/user_info_list_tile.dart';
@@ -13,11 +14,9 @@ class DrawerView extends StatelessWidget {
       color: Colors.white,
       child: CustomScrollView(
         slivers: [
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: UserInfoListTile(
-              avatar: 'assets/icons/avatar3.svg',
-              title: 'Lekan Okeowo',
-              subTitle: 'demo@gmail.com',
+              model: UserInfoItemModel(icon: 'assets/icons/avatar3.svg', name: 'Lekan Okeowo', email: 'demo@gmail.com'),
             ),
           ),
           const SliverToBoxAdapter(child: SizedBox(height: 8,)),
