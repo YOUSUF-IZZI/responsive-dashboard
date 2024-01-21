@@ -16,13 +16,13 @@ class HomePage extends ConsumerWidget {
       body: LayoutBuilder(
         builder: (context, constraints) {
           if (constraints.maxWidth<600) {
-            ref.read(deviceTypeProvider.notifier).changeDeviceType(DeviceType.mobile);
+            //ref.read(deviceTypeProvider.notifier).changeDeviceType(DeviceType.mobile);
             return const MobileLayout();
           }  else if (constraints.maxWidth < 900) {
-            ref.read(deviceTypeProvider.notifier).changeDeviceType(DeviceType.tablet);
+            //ref.read(deviceTypeProvider.notifier).changeDeviceType(DeviceType.tablet);
             return const TabletLayout();
           }  else {
-            ref.read(deviceTypeProvider.notifier).changeDeviceType(DeviceType.desktop);
+            //ref.read(deviceTypeProvider.notifier).changeDeviceType(DeviceType.desktop);
             return const DesktopLayout();
           }
         },

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/presentation_layer/components/my_card_component.dart';
+
 
 class CardView extends StatelessWidget {
-  const CardView({Key? key}) : super(key: key);
+  const CardView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +14,14 @@ class CardView extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
+      ),
+      child: const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          MyCardComponent(),
+          SizedBox(height: 24,),
+          //IncomeComponent(),
+        ],
       ),
     );
   }

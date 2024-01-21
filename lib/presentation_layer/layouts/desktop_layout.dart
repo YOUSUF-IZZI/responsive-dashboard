@@ -25,6 +25,7 @@ class DesktopLayout extends StatelessWidget {
           flex: 4,
           child: CardView(),
         ),
+        SizedBox(width: 24,),
       ],
     );
   }
