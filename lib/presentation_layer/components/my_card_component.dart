@@ -23,7 +23,9 @@ class MyCardComponent extends ConsumerWidget {
         ),
         const SizedBox(height: 20,),
         ScrollConfiguration(
-          behavior: const MaterialScrollBehavior().copyWith(dragDevices: {PointerDeviceKind.mouse}),
+          behavior: MediaQuery.sizeOf(context).width < 800 ?
+          const MaterialScrollBehavior().copyWith(dragDevices: {PointerDeviceKind.touch}) :
+          const MaterialScrollBehavior().copyWith(dragDevices: {PointerDeviceKind.mouse}),
           child: ExpandablePageView(
             onPageChanged: (index){
               ref.read(pageViewIndexProvider.notifier).state = index;

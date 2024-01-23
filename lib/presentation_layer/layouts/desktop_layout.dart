@@ -10,6 +10,7 @@ class DesktopLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(
           flex: 3,
@@ -18,12 +19,12 @@ class DesktopLayout extends StatelessWidget {
         SizedBox(width: 24,),
         Expanded(
           flex: 6,
-          child: MainView(),
+          child: SingleChildScrollView(child: MainView()),
         ),
         SizedBox(width: 24,),
         Expanded(
           flex: 4,
-          child: CardView(),
+          child: SingleChildScrollView(child: CardView()),
         ),
         SizedBox(width: 24,),
       ],

@@ -11,9 +11,11 @@ class DrawerView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 300,
       color: Colors.white,
       child: CustomScrollView(
         slivers: [
+          const SliverToBoxAdapter(child: SizedBox(height: 24,),),
           SliverToBoxAdapter(
             child: UserInfoListTile(
               model: UserInfoItemModel(icon: 'assets/icons/avatar3.svg', name: 'Lekan Okeowo', email: 'demo@gmail.com'),

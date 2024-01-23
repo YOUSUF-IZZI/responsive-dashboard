@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/presentation_layer/widgets/card_view.dart';
+import 'package:responsive_dashboard/presentation_layer/widgets/main_view.dart';
 
 
 class MobileLayout extends StatelessWidget {
@@ -6,6 +8,15 @@ class MobileLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('Mobile l');
+    return const SingleChildScrollView(
+      child: Column(
+        children: [
+          MainView(),
+          SizedBox(height: 24,),
+          CardView(),
+          SizedBox(height: 24,),
+        ],
+      ),
+    );
   }
 }
