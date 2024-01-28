@@ -51,7 +51,7 @@ class CardWidget extends StatelessWidget {
                 style: AppStyle.styleRegular16(context).copyWith(color: Colors.white),
               ),
             ),
-            const SizedBox(height: 24,)
+            const Flexible(child: SizedBox(height: 24,))
           ],
         ),
       ),

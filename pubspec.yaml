@@ -15,6 +15,7 @@ dependencies:
   flutter_svg: ^2.0.9
   flutter_riverpod: ^2.4.9
   expandable_page_view: ^1.0.17
+  device_preview: ^1.1.0
 
 ############################################################################
 dev_dependencies:

@@ -15,7 +15,9 @@ class LatestTransactionList extends StatelessWidget {
   Widget build(BuildContext context) {
     // This approach is used for small number of items for responsive purposes
     return ScrollConfiguration(
-      behavior: const MaterialScrollBehavior().copyWith(dragDevices: {PointerDeviceKind.mouse}),
+      behavior: MediaQuery.sizeOf(context).width < 800 ?
+      const MaterialScrollBehavior().copyWith(dragDevices: {PointerDeviceKind.touch}) :
+      const MaterialScrollBehavior().copyWith(dragDevices: {PointerDeviceKind.mouse}),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
@@ -23,18 +25,5 @@ class LatestTransactionList extends StatelessWidget {
         ),
       ),
     );
-    /*return SizedBox(
-      height: 80,
-      child: ScrollConfiguration(
-        behavior: const MaterialScrollBehavior().copyWith(dragDevices: {PointerDeviceKind.mouse}),
-        child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: items.length,
-          itemBuilder: (context, index) {
-            return IntrinsicWidth(child: UserInfoListTile(model: items[index],));
-          },
-        ),
-      ),
-    );*/
   }
 }
