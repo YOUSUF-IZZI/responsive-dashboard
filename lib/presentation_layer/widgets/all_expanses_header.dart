@@ -11,9 +11,9 @@ class AllExpansesHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text(
+         Text(
           'All Expenses',
-          style: AppStyle.styleSemiBold20,
+          style: AppStyle.styleSemiBold20(context),
         ),
         const Spacer(),
         Container(
@@ -25,14 +25,14 @@ class AllExpansesHeader extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
           ),
-          child: const Row(
+          child: Row(
             children: [
               Text(
                 'Monthly',
-                style: AppStyle.styleMedium16,
+                style: AppStyle.styleMedium16(context),
               ),
-              SizedBox(width: 18,),
-              Icon(Icons.arrow_drop_down_outlined),
+              const SizedBox(width: 18,),
+              const Icon(Icons.arrow_drop_down_outlined),
             ],
           ),
         )

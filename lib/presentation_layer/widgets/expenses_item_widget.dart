@@ -55,17 +55,17 @@ class AllExpensesItemWidget extends ConsumerWidget {
             const SizedBox(height: 34),
             Text(
               itemModel.title,
-              style: selectedItem == itemModel.title ? AppStyle.styleSemiBold16.copyWith(color: Colors.white) : AppStyle.styleSemiBold16
+              style: selectedItem == itemModel.title ? AppStyle.styleSemiBold16(context).copyWith(color: Colors.white) : AppStyle.styleSemiBold16(context)
             ),
             const SizedBox(height: 8,),
             Text(
               itemModel.date,
-                style: selectedItem == itemModel.title ? AppStyle.styleRegular14.copyWith(color: Colors.white) : AppStyle.styleRegular14
+                style: selectedItem == itemModel.title ? AppStyle.styleRegular14(context).copyWith(color: Colors.white) : AppStyle.styleRegular14(context)
             ),
             const SizedBox(height: 8,),
             Text(
               itemModel.price,
-                style: selectedItem == itemModel.title ? AppStyle.styleSemiBold24.copyWith(color: Colors.white) : AppStyle.styleSemiBold24
+                style: selectedItem == itemModel.title ? AppStyle.styleSemiBold24(context).copyWith(color: Colors.white) : AppStyle.styleSemiBold24(context)
             )
             /*Container(
               width: double.infinity,

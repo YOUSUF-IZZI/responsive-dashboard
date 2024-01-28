@@ -18,15 +18,15 @@ class TransactionHistoryListTile extends StatelessWidget {
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         title: Text(
           model.title,
-          style: AppStyle.styleSemiBold16,
+          style: AppStyle.styleSemiBold16(context),
         ),
         subtitle: Text(
           model.date,
-          style: AppStyle.styleRegular16.copyWith(color: const Color(0xFFAAAAAA),),
+          style: AppStyle.styleRegular16(context).copyWith(color: const Color(0xFFAAAAAA),),
         ),
         trailing: Text(
           model.price,
-          style: AppStyle.styleSemiBold20.copyWith(color: model.isWithdrawal == true ? AppColors.red : AppColors.green),
+          style: AppStyle.styleSemiBold20(context).copyWith(color: model.isWithdrawal == true ? AppColors.red : AppColors.green),
         ),
       ),
     );

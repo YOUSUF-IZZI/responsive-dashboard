@@ -23,7 +23,7 @@ class DrawerItemListTile extends ConsumerWidget {
           leading: SvgPicture.asset(itemModel.icon),
           title: Text(
             itemModel.title,
-            style: index == selectedIndex ? AppStyle.styleBold16.copyWith(color: AppColors.appColor) : AppStyle.styleRegular16,
+            style: index == selectedIndex ? AppStyle.styleBold16(context).copyWith(color: AppColors.appColor) : AppStyle.styleRegular16(context),
           ),
           trailing: index == selectedIndex ?
           Container(

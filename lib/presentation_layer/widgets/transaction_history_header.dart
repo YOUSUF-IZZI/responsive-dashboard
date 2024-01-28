@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../../utils/app_styles.dart';
+
 
 class TransactionHistoryHeader extends StatelessWidget {
   const TransactionHistoryHeader({super.key});
@@ -9,14 +9,14 @@ class TransactionHistoryHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text(
+        Text(
           'Transaction History',
-          style: AppStyle.styleSemiBold20,
+          style: AppStyle.styleSemiBold20(context),
         ),
         const Spacer(),
         Text(
           'See all',
-          style: AppStyle.styleMedium16.copyWith(color: const Color(0xFF4EB7F2)),
+          style: AppStyle.styleMedium16(context).copyWith(color: const Color(0xFF4EB7F2)),
         )
       ],
     );

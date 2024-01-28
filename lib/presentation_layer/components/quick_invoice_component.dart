@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/presentation_layer/components/quick_invoice_form.dart';
-import 'package:responsive_dashboard/presentation_layer/widgets/cusotm_text_field.dart';
 import 'package:responsive_dashboard/presentation_layer/widgets/latest_transaction_list.dart';
 import 'package:responsive_dashboard/presentation_layer/widgets/quick_invoice_header.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
@@ -18,22 +17,22 @@ class QuickInvoiceComponent extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          QuickInvoiceHeader(),
-          SizedBox(height: 24,),
+          const QuickInvoiceHeader(),
+          const SizedBox(height: 24,),
           Text(
             'Latest Transaction',
-            style: AppStyle.styleMedium16
+            style: AppStyle.styleMedium16(context)
           ),
-          SizedBox(height: 12,),
-          LatestTransactionList(),
-          Divider(
+          const SizedBox(height: 12,),
+          const LatestTransactionList(),
+          const Divider(
             height: 48,
             color: Color(0xFFF1F1F1),
           ),
-          QuickInvoiceForm(),
+          const QuickInvoiceForm(),
         ],
       ),
     );
